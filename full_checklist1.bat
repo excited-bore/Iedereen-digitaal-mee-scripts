@@ -9,8 +9,8 @@ call "%~dp0windows_update.bat"
 REM Optional Updates
 call "%~dp0enable_optional_updates.bat"
 
-REM Turn off password for admin
-call "%~dp0turn_off_password_admin.bat"
+REM Turn off password for user
+call "%~dp0no_password.bat"
 
 REM Check if winget is installed. If not, try and fix
 call "%~dp0check_winget.bat"
