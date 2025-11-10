@@ -5,16 +5,17 @@ where winget >nul 2>&1 || (
     powershell -NoProfile -ExecutionPolicy Bypass -Command "Get-AppxPackage -Name 'Microsoft.DesktopAppInstaller' -AllUsers | Out-Null; if (-not $?) {Start-Process 'ms-windows-store://pdp/?productid=9NBLGGH4NNS1'} else {Write-Host 'Already installed.'}"
 )
 
-where wget2 >nul 2>&1 || (
+where wget >nul 2>&1 || (
     set "INS_WGET=1" 
-    winget install --id GNU.Wget2 --silent --accept-package-agreements --accept-source-agreements
+    echo Installing wget 
+    winget install --id JernejSimoncic.Wget --silent --accept-package-agreements --accept-source-agreements
 ) 
 
 mkdir %TEMP%\DellSupport\
 cd %TEMP%\DellSupport
-wget2 -q https://downloads.dell.com/serviceability/catalog/SupportAssistinstaller.exe
+wget -nv --https-only --show-progress https://downloads.dell.com/serviceability/catalog/SupportAssistinstaller.exe
 powershell -NoProfile -ExecutionPolicy Bypass -Command "%TEMP%\DellSupport\SupportAssistinstaller.exe"
 
 if defined INS_WGET (
-    winget remove --id GNU.Wget2 --silent --accept-package-agreements --accept-source-agreements
+    winget remove --id JernejSimoncic.Wget --silent --accept-package-agreements --accept-source-agreements
 )
