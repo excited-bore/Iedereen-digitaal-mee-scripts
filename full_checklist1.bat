@@ -5,13 +5,13 @@ pause
 
 
 REM Optional Updates
-call "%~dp0scripts\enable_optional_updates.bat"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\enable_optional_updates.ps1"
 
 REM Windows Update
 call "%~dp0scripts\windows_update.bat"
 
 REM Turn off password for user
-call "%~dp0scripts\no_password.bat"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\no_password.ps1"
 
 REM Check if winget is installed. If not, try and fix
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\check_winget.ps1"

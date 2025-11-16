@@ -51,7 +51,6 @@ call "%~dp0scripts\no_account_notifications.bat"
 REM Putting 'This PC' shortcut on desktop...
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\add_mypc_desktop_icon.ps1
 
-
 REM Drive storage
 call "%~dp0scripts\drive_space.bat"
 

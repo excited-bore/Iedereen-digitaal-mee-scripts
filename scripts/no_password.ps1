@@ -1,0 +1,1 @@
+Start-Process PowerShell -ArgumentList '-ExecutionPolicy Bypass','-Command','net user $env:USERNAME ""' -Verb RunAs
