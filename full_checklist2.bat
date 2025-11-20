@@ -4,7 +4,7 @@ REM Apps installeren...
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\install_apps.ps1"
 
 REM Setting file explorer options...
-call "%~dp0scripts\fileExplorer.bat"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\fileExplorer.ps1"
 
 REM Setting keyboard...
 call "%~dp0scripts\qwerty_azerty.bat"
@@ -36,6 +36,9 @@ call "%~dp0scripts\taskbar_search_icon.bat"
 REM Move onedrive to overflow menu...
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\onedrive_overflow.ps1"
 
+REM Disable onedrive on startup...
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\disable_onedrive.ps1"
+
 REM Remove copilot from taskbar...
 call "%~dp0scripts\disable_copilot_taskbar.bat"
 
@@ -52,13 +55,16 @@ REM Turning off accountrelated notifications...
 call "%~dp0scripts\no_account_notifications.bat"
 
 REM Putting 'This PC' shortcut on desktop...
-powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\add_mypc_desktop_icon.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\add_mypc_desktop_icon.ps1"
+
+REM Restarting File explorer...
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\restart_explorer.ps1"
 
 REM Drive storage
 call "%~dp0scripts\drive_space.bat"
 
 REM Ram Amount
-call "%~dp0scripts\ram_amount.bat"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\ram_amount.ps1"
 
 REM Processor
 call "%~dp0scripts\processor.bat"

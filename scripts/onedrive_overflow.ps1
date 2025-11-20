@@ -1,5 +1,19 @@
-Write-Host "Move onedrive to overflow menu"
+Write-Host "Moving onedrive to overflow menu"
 
-$key = 'HKCU:\Control Panel\NotifyIconSettings\16006572209258084918';
+$fpath = "C:\Users\$env:USERNAME\AppData\Local\Microsoft\OneDrive\OneDrive.exe"
 
-Set-ItemProperty $key -Name "IsPromoted" 0; 
+$spath = "HKCU:\Control Panel\NotifyIconSettings"
+
+$subkeys = Get-ChildItem -Path $spath -ErrorAction SilentlyContinue
+
+foreach ($key in $subkeys) {
+
+    # Try to read the ExecutablePath value, skip if not present
+    $exePath = (Get-ItemProperty -Path $key.PSPath -ErrorAction SilentlyContinue).ExecutablePath
+    
+    if ($exePath -and ($exePath -ieq $fpath)) {
+        $spath1 = "$spath\" + $key.PSChildName   
+        Set-ItemProperty $spath1 -Name "IsPromoted" 0; 
+    }
+}
+
