@@ -1,4 +1,5 @@
 Write-Host "Setting diagnostic feedback frequency to never" 
+
 $key = 'HKCU:\SOFTWARE\Microsoft\Siuf\Rules'; 
 if ( -Not (Test-Path -Path $key)) { 
     New-Item -Path $key -Force | Out-Null 

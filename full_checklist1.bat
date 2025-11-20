@@ -3,12 +3,11 @@
 echo Synchronise clock before resuming to update Windows / drivers.
 pause
 
-
 REM Optional Updates
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\enable_optional_updates.ps1"
 
 REM Windows Update
-call "%~dp0scripts\windows_update.bat"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\windows_update.ps1"
 
 REM Turn off password for user
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\no_password.ps1"

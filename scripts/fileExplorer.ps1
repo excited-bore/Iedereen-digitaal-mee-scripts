@@ -1,3 +1,7 @@
+Write-Host "Setting file explorer options to:"
+Write-Host "    - Show file extensions"
+Write-Host "    - Show full path in title bar"
+
 $key = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
 Set-ItemProperty $key HideFileExt 0
 Set-ItemProperty $key FullPath 1

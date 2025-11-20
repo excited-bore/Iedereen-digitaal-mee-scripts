@@ -7,31 +7,31 @@ REM Setting file explorer options...
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\fileExplorer.ps1"
 
 REM Setting keyboard...
-call "%~dp0scripts\qwerty_azerty.bat"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\qwerty_azerty.ps1"
 
 REM Setting diagnostic feedback frequency...
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\feedback_never.ps1"
 
 REM Disabling lockscreen notifications and notification sounds...
-call "%~dp0scripts\disable_sound_or_lockscreen_notifications.bat"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\disable_sound_or_lockscreen_notifications.ps1"
 
 REM Checking camera...
-call "%~dp0scripts\check_camera.bat"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\check_camera.ps1"
 
 REM Checking microphone...
-call "%~dp0scripts\check_microphone.bat"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\check_microphone.ps1"
 
 REM Checking speakers...
-call "%~dp0scripts\check_sound.bat"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\check_sound.ps1"
 
 REM Checking keyboard...
-call "%~dp0scripts\check_keyboard.bat"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\check_keyboard.ps1"
 
 REM Disabling taskview and widgets...
-call "%~dp0scripts\disable_taskview_widgets.bat"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\disable_taskview_widgets.ps1"
 
 REM Turn searchbar into search icon...
-call "%~dp0scripts\taskbar_search_icon.bat"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\taskbar_search_icon.ps1"
 
 REM Move onedrive to overflow menu...
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\onedrive_overflow.ps1"
@@ -40,19 +40,19 @@ REM Disable onedrive on startup...
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\disable_onedrive.ps1"
 
 REM Remove copilot from taskbar...
-call "%~dp0scripts\disable_copilot_taskbar.bat"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\disable_copilot_taskbar.ps1"
 
 REM Disable windows spotlight on lockscreen...
-call "%~dp0scripts\disable_windows_spotlight.bat"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\disable_windows_spotlight.ps1"
 
 REM Turning off 'fun facts, tips and tricks'...
-call "%~dp0scripts\disable_facts_tips_tricks.bat"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\disable_facts_tips_tricks.ps1"
 
 REM Turning off suggestions for tips...
-call "%~dp0scripts\disable_tips_suggestions.bat"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\disable_tips_suggestions.ps1"
 
 REM Turning off accountrelated notifications...
-call "%~dp0scripts\no_account_notifications.bat"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\no_account_notifications.ps1"
 
 REM Putting 'This PC' shortcut on desktop...
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\add_mypc_desktop_icon.ps1"
@@ -61,18 +61,18 @@ REM Restarting File explorer...
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\restart_explorer.ps1"
 
 REM Drive storage
-call "%~dp0scripts\drive_space.bat"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\drive_space.ps1"
 
 REM Ram Amount
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\ram_amount.ps1"
 
 REM Processor
-call "%~dp0scripts\processor.bat"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\processor.ps1"
 
 REM Windows Version
-call "%~dp0scripts\winversion.bat"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\winversion.ps1"
 
 REM Serial number
-call "%~dp0scripts\serialnumber.bat"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\serialnumber.ps1"
 
 pause
