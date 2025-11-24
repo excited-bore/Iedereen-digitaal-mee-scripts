@@ -42,6 +42,9 @@ powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\disable_onedrive.
 REM Remove copilot from taskbar...
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\disable_copilot_taskbar.ps1"
 
+REM Set wallpaper to the default background...
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\default_wallpaper.ps1"
+
 REM Disable windows spotlight on lockscreen...
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\disable_windows_spotlight.ps1"
 
