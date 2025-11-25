@@ -1,2 +1,2 @@
-Write-Host "Cleaning trashbin"
-Clear-RecycleBin -Force
+Write-Host "Emptying trashbin"
+Clear-RecycleBin -DriveLetter C: -Force
