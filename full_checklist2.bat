@@ -79,3 +79,6 @@ REM Serial number
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\serialnumber.ps1"
 
 pause
+
+REM Cleanup
+call "%~dp0cleanup.bat"
