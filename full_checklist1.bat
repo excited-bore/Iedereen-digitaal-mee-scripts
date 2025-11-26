@@ -15,6 +15,9 @@ powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\no_password.ps1"
 REM Check if winget is installed. If not, try and fix
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\check_winget.ps1"
 
+REM Update Apps
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\update_apps.ps1"
+
 REM Try and install updaters and support assisters
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\update-drivers.ps1"
 
