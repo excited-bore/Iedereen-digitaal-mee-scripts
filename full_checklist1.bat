@@ -17,3 +17,6 @@ powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\check_winget.ps1"
 
 REM Try and install updaters and support assisters
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\update-drivers.ps1"
+
+echo Done!
+pause
