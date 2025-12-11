@@ -1,7 +1,8 @@
 @echo off
 
 REM Apps installeren...
-powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\install_apps.ps1"
+powershell -Command "Start-Process -Verb RunAs powershell '-ExecutionPolicy Bypass -Command "^"" cd \\"^""D:\Iedereen-digitaal-mee-scripts\scripts\\"^""; & \\"^"".\install_apps.ps1\\"^"" "^""'"
+REM powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\install_apps.ps1"
 
 REM Setting file explorer options...
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\fileExplorer.ps1"

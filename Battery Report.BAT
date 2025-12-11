@@ -1,0 +1,1 @@
+powercfg /batteryreport /output "C:\Users\Admin\Desktop\Battery.html"
