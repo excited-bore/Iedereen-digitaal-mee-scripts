@@ -25,4 +25,4 @@ public class Wallpaper {
 "@
 
 # SPI_SETDESKWALLPAPER = 20 ; SPIF_UPDATEINIFILE = 1 ; SPIF_SENDWININICHANGE = 2
-[Wallpaper]::SystemParametersInfo(20, 0, $wallpaper, 3)
+[Wallpaper]::SystemParametersInfo(20, 0, $wallpaper, 3) | Out-Null
