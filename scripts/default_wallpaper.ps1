@@ -23,6 +23,27 @@ public class Wallpaper {
     public static extern bool SystemParametersInfo(int uAction, int uParam, string lpvParam, int fuWinIni);
 }
 "@
+# uAction = What do you want to do?
+# SPI_SETDESKWALLPAPER = 20 ; 
+# SPI_GETDESKWALLPAPER = 0x73 
+# SPI_SETMOUSE = 4 
 
-# SPI_SETDESKWALLPAPER = 20 ; SPIF_UPDATEINIFILE = 1 ; SPIF_SENDWININICHANGE = 2
+# uParam = Extra numeric data (context-dependent) (boolean)
+# For SPI_SETDESKWALLPAPER, uParam must be 0
+
+# pvParam — Data pointer (the actual value)
+# Path to image
+
+# fWinIni — How changes are applied and broadcast
+# bitmask of:
+
+# SPIF_NONE = 0
+# Change applies only for current session
+
+# SPIF_UPDATEINIFILE = 1 
+# Save setting to user profile
+
+# SPIF_SENDWININICHANGE = 2
+# Notify other applications
+
 [Wallpaper]::SystemParametersInfo(20, 0, $wallpaper, 3) | Out-Null
