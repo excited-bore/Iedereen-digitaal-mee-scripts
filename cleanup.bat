@@ -1,3 +1,4 @@
+@echo off
 REM Empty Terminal history
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\cleanhistory.ps1"
 
@@ -9,3 +10,4 @@ powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\clean_edge.ps1"
 
 REM Empty Trash
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\clean_trash.ps1"
+pause
