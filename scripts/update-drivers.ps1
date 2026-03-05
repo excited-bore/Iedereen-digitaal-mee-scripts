@@ -2,36 +2,30 @@ $manufacturer = Get-CimInstance -Classname Win32_ComputerSystem | Select-Object 
 
 if ( $manufacturer -eq 'Dell Inc.'){
     
-    Write-Host "Dell System detected. Installing Dell Commandline"
+    Write-Host "Dell System detected."
     
     .\scripts\dellupdate.ps1 
     
     # Now dellsupportassist 
     
-    Write-Host "Installing DellSupportAssistant" 
-
     .\scripts\dellsupportassist.ps1 
     
 } elseif ( ( $manufacturer -eq 'HP' ) -or ( $manufacturer -eq 'Hewlett-Packard' )){
-    Write-Host "HP system detected. Installing HP ImageAssistant..."
     
-    .\scripts\hpupdates.ps1
+    Write-Host "HP system detected."
     
     # Now hpsupportassist 
-    
-    Write-Host "Installing HPSupportAssist..." 
 
     .\scripts\hpsupportassist.ps1
 
 } elseif ( $manufacturer -eq 'LENOVO' ){
-    Write-Host "Lenovo system detected. Installing Lenovo Update..."
+    
+    Write-Host "Lenovo system detected."
     
     .\scripts\lenovoupdate.ps1
     
     # Now lenovo vantage 
     
-    Write-Host "Installing Lenovo Vantage..." 
-
     .\scripts\lenovovantage.ps1
 
 } elseif ( $manufacturer -eq "ASUSTeK COMPUTER INC." ) {
