@@ -30,7 +30,8 @@ if (Get-Command "winget" -ErrorAction SilentlyContinue){
         Write-Host "Installing Firefox"
         winget install --id Mozilla.Firefox.nl --accept-package-agreements --accept-source-agreements
     }
-    
+    # https://addons.mozilla.org/firefox/downloads/file/3736679/belgium_eid-1.0.32.xpi   
+
     Write-Host "Checking if Chrome is installed" 
     if ((winget list -q Google.Chrome) -eq 'No installed package found matching input criteria.' ){ 
         Write-Host "Installing Chrome"
