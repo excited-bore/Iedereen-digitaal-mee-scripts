@@ -1,7 +1,7 @@
 @echo off
 
 REM Apps installeren...
-powershell -Command "Start-Process -Verb RunAs powershell '-ExecutionPolicy Bypass -Command "^"" cd \\"^""D:\Iedereen-digitaal-mee-scripts\scripts\\"^""; & \\"^"".\install_apps.ps1\\"^"" "^""'"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\apps_elevated.ps1"
 REM powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\install_apps.ps1"
 
 REM Setting file explorer options...
@@ -40,8 +40,8 @@ powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\onedrive_overflow
 REM Disable onedrive on startup...
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\disable_onedrive.ps1"
 
-REM Remove copilot from taskbar...
-powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\disable_copilot_taskbar.ps1"
+REM Remove copilot from taskbar - Doesn't seem to work...
+REM powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\disable_copilot_taskbar.ps1"
 
 REM Set wallpaper to the default background...
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\default_wallpaper.ps1"
@@ -60,9 +60,11 @@ powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\no_account_notifi
 
 REM Putting 'This PC' shortcut on desktop...
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\add_mypc_desktop_icon.ps1"
-
 REM Restarting File explorer...
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\restart_explorer.ps1"
+
+REM Battery Report
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\batteryrep.ps1"
 
 REM Drive storage
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\drive_space.ps1"

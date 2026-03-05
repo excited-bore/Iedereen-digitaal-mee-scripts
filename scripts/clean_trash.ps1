@@ -1,2 +1,2 @@
-Write-Host "Emptying trashbin"
-Clear-RecycleBin -DriveLetter C: -Force -ErrorAction:Ignore
+Write-Host "Emptying trashbin" -ForegroundColor Green
+Clear-RecycleBin -DriveLetter C: -Force -ErrorAction Ignore

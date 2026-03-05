@@ -1,16 +1,25 @@
+$EdgePath = "$env:APPDATA\Microsoft\Edge"
+$EdgePath1 = "$env:LOCALAPPDATA\Microsoft\Edge"                                                                                                                                                                                                                    
 
-$edgePath = "$env:LOCALAPPDATA\Microsoft\Edge\User Data"
+Write-Host "Closing Edge if still running..." -ForegroundColor Yellow                                                                               
+Get-Process msedge -ErrorAction SilentlyContinue | Stop-Process -Force
 
-if (Test-Path $edgePath) {
-    Write-Host "Closing Microsoft Edge if still running..."
-    Get-Process msedge -ErrorAction SilentlyContinue | Stop-Process -Force
-
-    Write-Host "Deleting all Edge user data..."
-    try {
-        Remove-Item -Path $edgePath -Recurse -Force -ErrorAction SilentlyContinue
-    } catch {
-        Remove-Item -Path $edgePath -Recurse -Force
-    } 
-
-    Write-Host "Microsoft Edge data has been wiped"
+if (Test-Path $EdgePath -ErrorAction SilentlyContinue) { 
+        
+	Write-Host "Deleting Edge roaming data folder..." -ForegroundColor Cyan
+	try {                                                                                                                                     
+		Remove-Item -Path $EdgePath -Recurse -Force -ErrorAction SilentlyContinue                                                         
+	} catch {
+		Remove-Item -Path $EdgePath -Recurse -Force
+	}
 }
+if (Test-Path $EdgePath1 -ErrorAction SilentlyContinue){
+	
+	Write-Host "Deleting Edge local data folder..." -ForegroundColor Cyan
+	try {                                                                                                                                     
+		Remove-Item -Path $EdgePath1 -Recurse -Force -ErrorAction SilentlyContinue                                                         
+	} catch {
+		Remove-Item -Path $EdgePath1 -Recurse -Force
+	}	
+}
+Write-Host "Edge data has been wiped" -ForegroundColor Green 
