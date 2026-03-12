@@ -1,7 +1,7 @@
 @echo off
 
 REM Clean Edge data
-powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\clean_edge.ps1"
+REM powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\clean_edge.ps1"
 
 REM Clean Firefox data
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\clean_firefox.ps1"
