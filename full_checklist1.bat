@@ -21,7 +21,7 @@ REM Update Apps
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\update_apps.ps1"
 
 REM Try and install updaters and support assisters
-powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\update-drivers.ps1"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\update_drivers.ps1"
 
 echo Done!
 pause
