@@ -39,8 +39,6 @@ if ( $manufacturer -eq 'Dell Inc.'){
     
     & "$PSScriptRoot\hpupdates.ps1"
     	
-    $filePath = "$PSScriptRoot\packages-dbs\hp-packages.csv"
-
 } elseif ( $manufacturer -eq 'LENOVO' ){
     
     Write-Host "Lenovo system detected." -ForegroundColor Cyan
@@ -53,8 +51,6 @@ if ( $manufacturer -eq 'Dell Inc.'){
     
     & "$PSScriptRoot\lenovoupdate.ps1"
 
-    $filePath = "$PSScriptRoot\packages-dbs\lenovo-packages.csv"
-
 } elseif ( $manufacturer -eq "ASUSTeK COMPUTER INC." ) {
     Write-Host "This is an ASUS system."
 } elseif ( $manufacturer -eq 'Acer' ) {
@@ -63,7 +59,4 @@ if ( $manufacturer -eq 'Dell Inc.'){
     Write-Host "This is a Gigabyte system."
 } else {
     Write-Host "Unknown system."
-    
-    $filePath = "$PSScriptRoot\packages-dbs\packages-test.csv"
-
 }
