@@ -20,7 +20,7 @@ if ( $manufacturer -eq 'Dell Inc.'){
 	
     Write-Host "Installing Dell SupportAssist..." -ForegroundColor Yellow
 
-    & "$PSScriptRoot\dellupdate.ps1"
+    & "$PSScriptRoot\dellsupportassist.ps1"
     
     
 } elseif ( ( $manufacturer -eq 'HP' ) -or ( $manufacturer -eq 'Hewlett-Packard' )){
