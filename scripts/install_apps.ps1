@@ -38,8 +38,8 @@ if (Get-Command "winget" -ErrorAction SilentlyContinue){
         try {
 	     winget install --id Google.Chrome --source winget --accept-package-agreements --accept-source-agreements
 	} catch {
-	     Write-Host "Installing Google chrom .msi failed. Trying .exe..." -ForegroundColor Yellow
- 	     winget install --id Google.Chrome --source winget --accept-package-agreements --accept-source-agreements
+	     Write-Host "Installing Google chrome .msi failed. Trying .exe..." -ForegroundColor Yellow
+ 	     winget install --id Google.Chrome.EXE --source winget --accept-package-agreements --accept-source-agreements
 	}
     }
     #if ((winget list -q 7zip.7zip) -eq 'No installed package found matching input criteria.' ){ 
