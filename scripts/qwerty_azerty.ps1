@@ -1,8 +1,10 @@
+. "$PSScriptRoot/Read-Host-Prefill.ps1"
+
 # Zet toetsenbord taal en layout naar enkel 
 # Belgisch Punt AZERTY of
 # US Internationaal QWERTY
 
-$toetsenbord = Read-Host -Prompt "Is toetsenbord AZERTY of QWERTY [A/Q]"; 
+$toetsenbord = Read-Host-Prefill -Prompt "Is toetsenbord AZERTY of QWERTY? [Azerty/Qwerty]: " -Prefills 'azerty', 'qwerty' -ForegroundColor Cyan; 
 
 # Voor als per ongeluk 'A' of 'Q' werd getyped
 $toetsenbord = $toetsenbord.ToLower(); 
